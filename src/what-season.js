@@ -18,10 +18,11 @@ module.exports = function getSeason(date) {
 
   if (date) {
     const testDate = new Date(date.getFullYear(), date.getMonth(), date.getDay(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds());
-    
+
     if (date.toString() === testDate.toString()) {
       return seazons[date.getMonth()];
     }
+    
     throw new CustomError("THROWN");
   }
 
