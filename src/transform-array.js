@@ -1,5 +1,3 @@
-const CustomError = require("../extensions/custom-error");
-
 module.exports = function transform(arr) {
   if (Array.isArray(arr)) {
     const action = ['--discard-prev', '--discard-next', '--double-next', '--double-prev'];    
@@ -23,5 +21,5 @@ module.exports = function transform(arr) {
     }, []); 
   }
 
-  throw new CustomError('Not implemented');
+  throw new Error('arr is not an Array');
 };

@@ -1,5 +1,3 @@
-const CustomError = require("../extensions/custom-error");
-
 const chainMaker = {
   links: [],
   getLength() {
@@ -19,7 +17,7 @@ const chainMaker = {
       position < 1;
     if (isInvalidPosition) {
       this.links = [];
-      throw new CustomError('Invalid position');
+      throw new Error('Invalid position');
     }
     this.links.splice(position - 1 , 1);
     return this;
